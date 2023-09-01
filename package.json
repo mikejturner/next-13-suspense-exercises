@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "start:local": "next start -p 4000"
   },
   "dependencies": {
     "lodash.range": "^3.2.0",
