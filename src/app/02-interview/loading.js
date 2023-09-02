@@ -3,24 +3,21 @@ import React from 'react';
 import { getComments } from '@/helpers/interview-helpers';
 import Comment from '@/components/Comment';
 import Article from '@/app/02-interview/components/Article';
+import Spinner from '@/components/Spinner/Spinner';
 import Discussion from '@/app/02-interview/components/Discussion';
 
 export const dynamic = 'force-dynamic';
 
-async function InterviewExercise() {
-  const comments = await getComments();
-
+async function InterviewLoading() {
   return (
     <>
       <Article />
 
       <Discussion>
-        {comments.map((comment) => (
-          <Comment key={comment.id} comment={comment} />
-        ))}
+        <Spinner />
       </Discussion>
     </>
   );
 }
 
-export default InterviewExercise;
+export default InterviewLoading;
